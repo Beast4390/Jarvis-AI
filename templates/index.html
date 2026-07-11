@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarvis AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>🤖 Jarvis</h2>
+                <p>Your Intelligent AI Chat Companion</p>
+            </div>
+
+            <button id="new-chat-btn">
+                + New Chat
+            </button>
+
+            <div class="chat-history">
+                <h3>Chats</h3>
+
+                <ul id="chat-list">
+                    <!-- Chats load here -->
+                </ul>
+
+            </div>
+
+        </aside>
+
+        <!-- Chat Area -->
+        <main class="chat-container">
+
+            <header class="chat-header">
+                <h2 id="chat-title">
+                    Welcome to Jarvis
+                </h2>
+            </header>
+
+            <section id="chat-box">
+
+                <div class="welcome-message">
+
+                    <h2>👋 Hello!</h2>
+
+                    <p>
+                        I'm <strong>Jarvis</strong>.
+                    </p>
+
+                    <p>
+                        Ask me anything.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <footer class="chat-input">
+
+                <input
+                    id="message-input"
+                    type="text"
+                    placeholder="Type your message..."
+                    autocomplete="off"
+                >
+
+                <button id="send-btn">
+                    Send
+                </button>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+    <!-- Markdown Library -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Your JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
